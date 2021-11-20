@@ -29,6 +29,10 @@
 \usepackage{ dsfont }
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amsfonts,amssymb,wasysym,dsfont,amsthm,graphicx,epsfig,epstopdf,titling,url,array,marvosym,theoremref,mathtools,hyperref,esvect,fullpage,MnSymbol,esint,gensymb,float,textcomp,wrapfig,enumerate,listings,imakeidx,soul}
+\renewcommand{\bf}[1]{\mathbf{#1}}
+\renewcommand{\dfrac}[2]{\frac{\partial #1}{\partial #2}}
+\renewcommand{\d}{\mathrm{d}}
+\newcommand{\oo}{\infty}
 
 \usepackage{ccaption}
 
@@ -83,12 +87,16 @@
     \section*{Abstract}  
 \end{center}
 
-We will look at the electroweak phase transitions in the early universe.
-Currently, we know that the Higgs boson is quite heavy which indicates a second-order phase transition of the electroweak.
-One altercation is that the early universe is extremely hot, thus resulting in high-temperature symmetry restoration.
-When we consider other theories that potentially have a first-order phase transition, we can look for bubble nucleations.
-When these bubbles collide in the early universe, they leave traces of gravitational waves behind.
-Which we could detect with future gravitational wave detector LISA.
+We will look at the electroweak phase transition in the early universe.
+% Currently, we know that the Higgs boson is quite heavy which indicates a second-order phase transition of the electroweak.
+Beginning with the standard model we can find that due to the mass of the Higgs boson that the electroweak is a second order phase transition.
+Note that, the early universe is extremely hot. 
+The standard model calculation therefore predicts an effect called high-temperature symmetry restoration.
+We will consider other theories that potentially have a first-order phase transition.
+These transitions will cause huge amount of latent energy, which propagate outwards.
+These are like bubbles and therefore is the effect called bubble nucleation.
+When these bubbles collide in the early universe, they generate gravitational waves.
+We could possibly detect these with future gravitational wave detector LISA.
 
 
 \newpage
@@ -115,7 +123,7 @@ This phenomenon is called bubble nucleation.
 There can be multiple places in the universe where such an event could have happened, creating multiple bubbles.
 When these bubbles collided in the early universe, they would leave traces of gravitational waves behind.
 This will end up being some stochastic gravitational waves in the background of today's universe.
-Which we could detect with future gravitational wave detector LISA.
+We possibly could detect with future gravitational wave detector LISA.
 
 
 \section{Spontaneous symmetry breaking}
@@ -163,8 +171,7 @@ So let's take a closer look at the graph of this potential.
 \end{center}
 
 I also added the 3-dimensional version, which most of us recognise as the Mexican hat graph.
-We immediately recognise that the 2-dimensional graph has the following symmetry $\phi\mapsto -\phi$.
-Which we also recognise in our Hamiltonian.
+We immediately recognise that the 2-dimensional graph has the following symmetry $\phi\mapsto -\phi$, which we also recognise in our Hamiltonian.
 For the 3 dimensional version, the symmetry is $U(1)$.
 In the 2 dimensional graph, we see that there are two minima. 
 These are the two degenerate ground states.
@@ -193,16 +200,16 @@ From cooling water to magnets, to the chirality of amino acids, to donkeys with 
 Until now we considered our field theory to live in a zero-temperature environment.
 This couldn't be further from the truth in the early universe.
 We already commented in the introduction that the early universe was an extreme place of temperatures that we can barely mimic by colliding protons at 99.999 996 4\% speed of light in the LHC.
-Thus we must look at how such large temperatures affect the math.
+Thus we must look at how such large temperatures affect the mathematics.
 We start by considering a heat bath where the theory lives in.
-Therefore some of the math has to change slightly to account for this.
+Therefore some of the mathematics has to change slightly to account for this.
 Namely we have to use an ensemble to calculate our partition function involving $\beta=\frac{1}{k_bT}$.
 This has the direct consequence for the 2-point function $D_\beta$.
 
 $$D_\beta (x-y)=\frac{\text{Tr} e^{-\beta H}\mathcal{T}[\phi(x)\phi(y)]}{\text{Tr} e^{-\beta H}}$$
 
 It's clear that this two-point function heavily relies on the temperature.
-The two-point function gives rise to loops that have to be renormalised and accounted for in the lagrangian.
+The two-point function gives rise to loops that have to be renormalised and accounted for in the Lagrangian.
 Using the two-point function for calculating the one-loop correction for the potential you'll find.
 
 \begin{center}
@@ -211,17 +218,16 @@ Using the two-point function for calculating the one-loop correction for the pot
 
 Now we have a corrected term for the effective potential, $V_T(\phi)=V(\phi)+\text{corrections}$.
 First, let us, Taylor to high temperature the previous one-loop correction.
-We find for the effective potential $V_T(\phi)$,
+We find for the effective potential $V_T(\phi)$
 % show more of the Taylor expansion (straightforwardly from the book)
 
 \begin{equation}
-    V_T(\phi)=V(\phi)+\frac{\lambda}{8}T^2\phi^2-\frac{\pi}{90}T^4+\dots
+    V_T(\phi)=V(\phi)+\frac{\lambda}{8}T^2\phi^2-\frac{\pi}{90}T^4+\dots,
 \end{equation}
 
-With $V(\phi)$ the potential of the $\phi-4$ model.
+with $V(\phi)$ the potential of the $\phi-4$ model.
 We can see that the temperature affects the graph in the parabolic part.
-Let us also define the critical temperature $T_c$. 
-Which is the temperature when the symmetry in the ground state is restored.
+Let us also define the critical temperature $T_c$, which is the temperature when the symmetry in the ground state is restored.
 I have plotted 4 graphs.
 
 
@@ -235,12 +241,17 @@ We start at a symmetry broken system in $T=0$. In $T>0$ case we start increasing
 These minima vanish at $T=T_c$.
 Where we immediately can see that the ground state will find itself in 0, which does have the symmetry of the Hamiltonian.
 Temperatures greater than $T_c$ will not change much of the physics. 
-Only the mass of the particle becomes greater.
+Only the mass of the field becomes greater.
 
+\subsection*{1st/2nd Order PTs (change name to smth more appropriate)}
+
+Much like phase transitions in general, phase transitions of the vacuum can be classified as either first- or second-order. The associated order parameter is the expectation value of the field $\phi$ (possibly re-scaled to cancel out its dimension), and the nature of a given transition is determined by the temperature dependence of the relevant potential
+
+In the second-order case, the potential is strictly convex for temperatures higher than the critical temperature. At the critical temperature, the two stable minima form at $\phi=0$, and as the system cools down further the expectation value of $\phi$ evolves smoothly. See [figure].
+
+In the first-order case, the potential is still convex at high temperatures. However, in contrast to the previous case, two local minima of the potential form at $\phi\neq0$, which eventually become global minima as the system is further cooled. Importantly, a potential barrier between the minima at $\phi=0$ and at $\phi\neq0$ is always present, and as such the evolution of the expectation value of $\phi$ is discontinuous. Associated with first-order transitions is also the release of latent heat/entropy [find source]. See [figure].
 
 %%% 1206 words until here (including abstract)
-
-
 
 \section{Electroweak Symmetry breaking in the early universe}
 
@@ -251,7 +262,7 @@ The particles and therefore the fields involved can be classified as fermions $\
 
 The fermions are described by spinors, the gauge bosons take values in the Lie algebra (i.e. they basically assign a matrix to every point in spacetime) and the Higgs boson is described by a spacetime depended complex  tuple. \\
 The theory can be expressed in terms of its Lagrangian density $\mathcal{L}[\psi^{i}, B, W^{a}, G^{j}, \Psi]$. This Lagrangian density enjoys a $SU(3) \times SU(2) \times U(1)$ gauge symmetry. 
-That means that at every point in spacetime, we can transform  all the fields differently by this gauge group and the Lagrangian density stays the same. Of course the transformation behaviour of the fields are crucial for the theory. The subgroup $SU(2)\times U(1)$ is called the \textit{electroweak symmetry} group. In particular, in the theory of the standard model, it is possible to perform a transformation of the electroweak symmetry group such that the Higgs field $\Phi$ gets reduced to a real scalar field. This is possible, because we can use the spacetime depended transformations to transform the complex two component vector of the Higgs field in every into 
+That means that at every point in spacetime, we can transform  all the fields differently by this gauge group and the Lagrangian density stays the same. Of course the transformation behaviour of the fields are crucial for the theory. The subgroup $SU(2)\times U(1)$ is called the \textit{electroweak symmetry} group. In particular, in the theory of the standard model, it is possible to perform a transformation of the electroweak symmetry group such that the Higgs field $\Phi$ gets reduced to a real scalar field. This is possible, because we can use the spacetime depended transformations to transform the complex two component vector of the Higgs field into 
 \begin{align*}
     \Phi = \begin{pmatrix} 0 \\ \phi\end{pmatrix}, 
 \end{align*}
@@ -262,8 +273,8 @@ After the electroweak symmetry breaking, the Higgsboson appears in the Lagrangia
     \mathcal{L}_H[B, W, \psi^{i}, \phi] = -\frac{1}{2}(\partial_{\mu} \phi)^2 -\underbrace{\frac{g^2\phi^2}{8 \cos(\theta_{W})^2} Z_{\mu}^2-\frac{g^2 \phi^2}{8}|W_{\mu}|^2 }_{=\mathcal{L}_b } - \underbrace{\sum_{i}G_i\psi^{i}_R \phi \psi^{i}_L}_{=\mathcal{L}_{\psi}}+\underbrace{\frac{m^2}{2}\phi^2-\frac{\lambda}{4}\phi^4}_{ = V(\phi)} ,
     \label{eq:standardmodelLagrangianforHiggs}
 \end{align}
-where we defined the fields $Z_{\mu}  = -\sin(\theta_W)B_{\mu} + \cos(\theta_W)W^{3}_{\mu}$ and $W_{\mu} = (W^1_{\mu})^2 + (W^2_{\mu})^2$. The angle $\theta_W$ is called the Weinberg angle. The potential $V_{\phi}(\phi)$ is already familiar from equation $\eqref{eq:phi-4-Lagrangian}$. If we vary the Higgsfield $\phi$ in the Lagrangian \eqref{eq:standardmodelLagrangianforHiggs} around the minimum of the Higgs potential $V_{\phi}$, we see that gauge bosonic part $\mathcal{L}_{b}$ and the fermionic part $\mathcal{L}_{\psi}$ in the Lagrangian have mass terms depending on the minimum of the Higgs potential. This is how the mass terms for the fermions and bosons arise. \\
-Therefore, we are much interested in the effective minimum of the potential for the Higgsfield $\phi$. But it is not sufficient to look at the minimum of $V_{\phi}$ but we want to consider the quantum corrections of one loops as well. In order to compute this, we can neglect the fermion couplings except for the coupling with the top quark, because the coupling of the top quark is so strong that it dominates the contribution for the fermions. 
+where we defined the fields $Z_{\mu}  = -\sin(\theta_W)B_{\mu} + \cos(\theta_W)W^{3}_{\mu}$ and $W_{\mu} = (W^1_{\mu})^2 + (W^2_{\mu})^2$. The angle $\theta_W$ is called the Weinberg angle. The potential $V_{\phi}(\phi)$ is already familiar from equation $\eqref{eq:phi-4-Lagrangian}$. If we vary the Higgs field $\phi$ in the Lagrangian \eqref{eq:standardmodelLagrangianforHiggs} around the minimum of the Higgs potential $V_{\phi}$, we see that gauge bosonic part $\mathcal{L}_{b}$ and the fermionic part $\mathcal{L}_{\psi}$ in the Lagrangian have mass terms depending on the minimum of the Higgs potential. This is how the mass terms for the fermions and bosons arise. \\
+Therefore, we are much interested in the effective minimum of the potential for the Higgs field $\phi$. But it is not sufficient to look at the minimum of $V_{\phi}$ but we want to consider the quantum corrections of one loops as well. In order to compute this, we can neglect the fermion couplings except for the coupling with the top quark, because the coupling of the top quark is so strong that it dominates the contribution of the fermions. 
 With these corrections, the one loop effective potential reads
 \begin{align*}
     V_{\phi}^{1loop}(\phi) =& -\frac{1}{2}m^2\phi + \frac{1}{4}\lambda\phi^4\\
@@ -275,9 +286,9 @@ With these corrections, the one loop effective potential reads
 %J
 Up to this point, we have considered the zero temperature one-loop effective potential, but we should also incorporate the temperature corrections because they played a primary role in the development of the phase transition in the early universe.
 \\
-It can be shown that temperature correction can be written as a sum of integrals of the form
+It can be shown that temperature correction can be written as a sum of integrals of the form,
 \begin{equation}
-F_{\pm}\left[X\left(\phi_{c}\right)\right] = \pm \int_{0}^{\infty} d x \quad x^{2} \ln \left[1 \mp \exp \left[-\left(x^{2}+\frac{X\left(\phi_{c}\right)}{ T^{2}}\right)^{1 / 2}\right]\right]
+F_{\pm}\left[X\left(\phi_{c}\right)\right] = \pm \int_{0}^{\infty} d x \quad x^{2} \ln \left[1 \mp \exp \left[-\left(x^{2}+\frac{X\left(\phi_{c}\right)}{ T^{2}}\right)^{1 / 2}\right]\right],
 \end{equation}
 where $F_+$ applies to boson loops and $F_-$ applies to fermion loops. Then, applying it to the one-loop effective potential we get
 \begin{align*}
@@ -290,7 +301,7 @@ V_{T}\left(\phi_{c}\right)=V_{1 L}\left(\phi_{c}\right)+T^{4} \mathcal{F}\left(T
 \end{equation}
 
 
-This $T^4$ interaction recovers a first or second order electroweak phase transition through the aforementioned high temperature restoration. The final nature of the transition will depend on the value of the Higgs mass, and the specifics can be computed by taking the appropiate limits of $V_T$.
+This $T^4$ interaction recovers a first or second order electroweak phase transition through the aforementioned high temperature restoration. The final nature of the transition will depend on the value of the Higgs mass, and the specifics can be computed by taking the appropriate limits of $V_T$.
 
 For the experimental value of the Higgs, we know that the transition must be second order because of (...).
 
@@ -306,6 +317,46 @@ phase transition. This leads to a problem: second-order phase transitions are sm
 nucleation are associated with these transitions. But this also leads to an opportunity: detecting any signals of a first-order phase transition 
 cosmological data will point to physics beyond the current Standard Model
 
+\section{Bubble Nucleation (make subsection/move around section in document?)}
+
+In first-order transitions, the presence of a potential barrier implies that the transition may not take place classically, but must instead occur via quantum tunnelling. Specifically, the transitions are said to occur through \emph{bubble nucleation}. The purpose of this section is to justify this naming, and outline some calculations involved. Initially, we assume $T=0$, to later incorporate finite temperature in our discussion.
+
+Since quantum tunnelling is involved, we prefer Wick rotated, or \emph{euclidean}, time $t_E=it$, since tunnelling phenomena can be interpreted as classical motion in euclidean time. With this choice, the equation of motion for $\phi\left (t_E,\bf x\right )$ is obtained through the Euler-Lagrange equation as
+\begin{align}\label{eq:EuclEOM}
+\dfrac{^2\phi}{t_E^2}+\nabla^2\phi-\frac{\d V}{\d\phi} = 0
+\end{align}
+working in natural units, such that $c=1$. Additionally, boundary conditions are chosen to yield the so-called \emph{bounce solution}. The first condition is $\phi(\pm\oo,\bf x)=0$, so that the universe starts out in the ``false" vacuum $\langle\phi\rangle=0$ at infinite past time, and ends up in the same state. The second condition is $\frac{\d\phi}{\d t_E}\left (0,\bf x\right )=0$, so that $\phi$ ``bounces" to some value $\langle\phi\rangle\neq0$ close to the ``true" vacuum at $t=0$, after which it bounces back.
+
+Now, the probability $\Gamma$ at which bubbles form, per unit time and per unit volume, is given [reference] by,
+\begin{align}\label{eq:BubbleProb}
+\Gamma = A\exp\left (-S_E\right ),
+\end{align}
+where $A$ is a prefactor whose details are beyond the scope of this report, and where,
+
+\begin{align}\label{eq:EuclAction}
+S_E = \int \d t_E\d^3x\ \left [\frac{1}{2}\left (\frac{\d\phi}{\d t_E}\right )^2+\frac{1}{2}(\nabla\phi)^2+V(\phi)\right ],
+\end{align}
+
+is the euclidean action associated with the field. In principle, all solutions $\phi$ which satisfy the equation of motion and the boundary conditions contribute to the probability $\Gamma$, but due to the sign of the exponent in \eqref{eq:BubbleProb} the solutions with the least action give the largest contributions. It is reasonable, therefore, to consider a solution that minimises the action. Such a solution has $O(4)$ symmetry, so that a new variable $r=\sqrt{t_E^2+\Vert\bf x\Vert^2}$ can be introduced, transforming \eqref{eq:EuclAction} into
+
+\begin{align}
+\frac{\d^2\phi}{\d r^2}+\frac{3}{r}\frac{\d\phi}{\d r}-\frac{\d V}{\d\phi} = 0
+\end{align}
+
+with updated boundary conditions derived from the previous ones. Even with this simplification, though, the above equation is generally not feasible to solve analytically, and one has to resort to numerical methods. Nonetheless, the $O(4)$ symmetry of $\phi$ has a nice interpretation, once the time is Wick rotated back to real time $t$, recalling that $\phi(r)=\phi\left (\sqrt{t^2-\Vert\bf x\Vert^2}\right )$. Suppose that the phase transition occurs quite rapidly at some $r\sim R$, which corresponds to a bubble of true vacuum inside $r\lesssim R$ and false vacuum outside, where the wall of the bubble is thin compared to the length scale $R$. Then, the equation for the bubble wall is
+
+\begin{align}
+R^2 = t^2-\Vert\bf x\Vert^2
+\end{align}
+
+In particular, at $t=0$ the bubble has radius $R$, and as time increases the bubble expands outwards, approaching the speed of light.
+
+As we now wish to incorporate non-zero temperature, the equation of motion for $\phi$ remains the same as \eqref{eq:EuclEOM}, with a few changes. Firstly, the (zero-temperature) potential $V$ must be replaced by the temperature-dependent potential $V_T$, but more importantly $\phi$ must now be periodic in $t_E$ with period $T^{-1}$ (recalling that natural units are used, so $k_B=1$). This periodicity simplifies the integral for the euclidean action, and one finds $S_E=S_3/T$ where
+\begin{align}
+S_3 = \int \d^3x\ \left [\frac{1}{2}(\nabla\phi)^2+V_T(\phi)\right ]
+\end{align}
+Similarly to the zero-temperature case, the solution $\phi$ that minimises the action at high temperatures has $O(3)$ symmetry (in the spatial coordinates).
+
 \section{Conclusion} %283 words
 In this article we have made a concise outline of the most important points relevant to the electroweak phase transition that occurred in the early universe when the extreme temperatures of this cosmic period, averaging $T = xxK$ dropped below a critical value of $T_c=yyK$.
 
@@ -316,6 +367,26 @@ To do this, we have had to take a close look at the expression for the Higgs pot
 We have also discussed how, in a generic way, phase transitions can be classified as first or second order, which gives rise to completely different physics. Second-order transitions are continuous, while first-order transitions exhibit a discontinuity that results in the release of latent energy. 
 
 Cosmically, this distinction is of fundamental phenomenological importance since second order transitions are experimentally invisible, while the latent energy release for first order transitions is given in the form of nucleation bubbles, which propagate at the speed of light and leave a trace in the fabric of spacetime in the form of gravitational waves. We also concluded that this distinction is fundamentally given by the mass of the Higgs boson, and how a mass higher than $100$ GeV (as it occurs experimentally in reality, at $125$ GeV) gives rise to second-order transitions.
+
+\begin{thebibliography}{}
+\bibitem{Kolb}
+Kolb, E.W., & Turner, M.S. (Eds.). (1990). The Early Universe (1st ed.). CRC Press. https://doi.org/10.1201/9780429492860
+
+\bibitem{Anupam}
+Anupam Mazumdar and Graham White 2019 Rep. Prog. Phys. 82 076901
+
+\bibitem{I dont know this paper}
+Senaha, E. Symmetry Restoration and Breaking at Finite Temperature: An Introductory Review. Symmetry 2020, 12, 733. https://doi.org/10.3390/sym12050733
+
+\bibitem{Caprini:2019egz}
+C.~Caprini, M.~Chala, G.~C.~Dorsch, M.~Hindmarsh, S.~J.~Huber, T.~Konstandin, J.~Kozaczuk, G.~Nardini, J.~M.~No and K.~Rummukainen, \textit{et al.}
+``Detecting gravitational waves from cosmological phase transitions with LISA: an update,''
+JCAP \textbf{03} (2020), 024
+doi:10.1088/1475-7516/2020/03/024.
+
+
+\end{thebibliography}
+
 
 
 \end{document}
